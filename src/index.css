@@ -1,13 +1,71 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.Header{
+  height: 3.96rem;
+}
+
+.Header-btn {
+  padding: 1.34rem 15px;
+  border-radius: 4px;
+}
+.Header-btn:hover {
+  background-color: #3988ff;
+}
+.Footer{
+  background-color: rgb(168, 168, 168);
+  padding: 25px;
+}
+.content{
+  min-height: calc(100vh - 77.188px - 69.859px);
+}
+.Recipe-table{
+  position: relative;
+  right: 120%;
+}
+
+.Recipe-table-show{
+  animation: showTable 1s ease-out forwards ;
+}
+.Recipe-table-hide{
+animation: hideTable 1s ease-in forwards;
+}
+.Recipe-btn{
+  width: 7.3rem;
+}
+
+
+
+
+@keyframes showTable {
+  from{
+    right: 120%;
+  }
+  to{
+    right: 0;
+  }
+}
+
+@keyframes hideTable {
+  from{
+    right: 0;
+  }
+  to{
+    right: 120%;
+  }
 }
