@@ -1,11 +1,24 @@
+import { useEffect, useState } from 'react';
 import {useNavigate} from 'react-router-dom'
+import { Loader2 } from './Loader';
 
 const Meals = ({ strMeal, strMealThumb, idMeal }) => {
     const navigate = useNavigate()
+    const [url, setUrl] = useState('')
+    useEffect(()=>{
+      fetch(strMealThumb).then(data => {
+        if(data.status === 200){
+          setUrl(data.url)
+        }
+      })
+    }, [strMealThumb])
+
+
   return (
       <div className="card m-2 py-2 Meals-card">
         <div className='Beef-cards'>
-        <img src={strMealThumb} className="card-img-top card_img" alt={strMeal} />
+          {!url ? <Loader2 /> : <img src={url} className="card-img-top card_img" alt={strMeal} />}
+        
         </div>
         <div className="card-body position-relative">
           <h5 className="card-title">{strMeal.length > 20 ? strMeal.slice(0, 20)+'...' : strMeal}</h5>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { byCategoryItems } from "../api";
-import Loader from "./Loader";
+import {Loader} from "./Loader";
 import Meals from "./Meals";
 
 const Meal = () => {

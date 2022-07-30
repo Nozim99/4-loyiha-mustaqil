@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getByCategory } from "../api";
 import Category from "../components/Category";
-import Loader from "../components/Loader";
+import {Loader} from "../components/Loader";
 
 const Home = () => {
   const [categories, setCategories] = useState([]);

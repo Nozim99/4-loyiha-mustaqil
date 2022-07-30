@@ -14,4 +14,12 @@ const Loader = () => {
     );
 };
 
-export default Loader;
+const Loader2 = ()=>{
+  return(
+    <div className="loader-2_color">
+      <div className="loader-2">Loading...</div>
+    </div>
+  )
+}
+
+export {Loader, Loader2};
