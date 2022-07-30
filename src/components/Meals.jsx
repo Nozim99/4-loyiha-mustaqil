@@ -4,7 +4,9 @@ const Meals = ({ strMeal, strMealThumb, idMeal }) => {
     const navigate = useNavigate()
   return (
       <div className="card m-2 py-2 Meals-card">
-        <img src={strMealThumb} className="card-img-top" alt={strMeal} />
+        <div className='Beef-cards'>
+        <img src={strMealThumb} className="card-img-top card_img" alt={strMeal} />
+        </div>
         <div className="card-body position-relative">
           <h5 className="card-title">{strMeal.length > 20 ? strMeal.slice(0, 20)+'...' : strMeal}</h5>
           <p className="card-text">

@@ -5,7 +5,9 @@ const CategoryList = ({strCategory, strCategoryThumb, strCategoryDescription}) =
 
   return (
       <div className="card m-2 py-2" style={{width: "18rem"}}>
-        <img src={strCategoryThumb} className="card-img-top" alt={strCategory} />
+        <div className="card_img_box">
+        <img src={strCategoryThumb} className="card-img-top card_img" alt={strCategory} />
+        </div>
         <div className="card-body">
           <h5 className="card-title">strCategory</h5>
           <p className="card-text">

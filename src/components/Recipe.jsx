@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getMealById } from "../api";
+import Loader from "./Loader";
 
 const Recipe = () => {
   const [items, setItems] = useState([]);
@@ -58,6 +59,10 @@ const Recipe = () => {
       setItems(data.meals[0]);
     });
   }, []);
+
+  if(!items){
+    return <Loader />
+  }
 
   return (
     <div className="content container pb-5">
